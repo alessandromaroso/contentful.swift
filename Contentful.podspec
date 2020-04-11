@@ -4,7 +4,7 @@ require 'dotenv/load'
 
 Pod::Spec.new do |spec|
   spec.name             = "Contentful"
-  spec.version          = ENV['CONTENTFUL_SDK_VERSION']
+  spec.version          = '5.0.9'
   spec.summary          = "Swift SDK for Contentful's Content Delivery API."
   spec.homepage         = "https://github.com/contentful/contentful.swift/"
   spec.social_media_url = 'https://twitter.com/contentful'
@@ -36,5 +36,7 @@ Pod::Spec.new do |spec|
   spec.subspec 'ImageOptions' do |subspec|
     subspec.source_files = 'Sources/Contentful/ImageOptions/*.swift'
   end
+
+  spec.pod_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
 end
 
